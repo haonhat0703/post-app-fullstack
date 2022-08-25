@@ -1,7 +1,19 @@
-POST http://localhost:3001/api/user
+POST http://localhost:3001/api/login
 Content-Type: application/json
 
 {
-  "username":"nhathao",
-  "password":"123456"
+  "username":"admin",
+  "password":"admin"
 }
+
+###
+POST http://localhost:3001/api/posts
+Content-Type: application/json
+
+{
+  "title":"Post 2",
+  "description":"Day la bai post so 2"
+}
+
+###
+GET http://localhost:3001/api/posts
