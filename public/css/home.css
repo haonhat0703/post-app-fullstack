@@ -6,11 +6,23 @@
 body{
   position: relative;
   background-color: rgb(103, 101, 99);
+  
+}
+
+#not-hide.hide{
+  background-color: aliceblue;
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0.4;
 }
 
 
 /*---------------------Logout button-------------------*/
-#logout{
+#logout, #open-create{
   position: fixed;
   top: 20px;
   right: 2%;
@@ -27,4 +39,175 @@ body{
 #logout:hover{
   background-color: rgb(234, 119, 119);
 }
+
+#logout{
+  z-index: 10;
+}
+
+/*---------------Button open board add post---------------*/
+#open-create{
+  left: 2%;
+  width: fit-content;
+  background-color: rgb(4, 150, 102);
+}
+
+#open-create:hover{
+  background-color: rgb(160, 236, 211);
+}
 /*-----------------------------------------------------*/
+
+
+/*-----------------------POSTS-------------------------*/
+.posts-container{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 50px;
+}
+
+
+/*----------------------------POST----------------------*/
+.post{
+  background-color: aliceblue;
+  padding: 10px 50px;
+  border-radius: 10px;
+  width: 50%;
+}
+
+.post:hover{
+  background-color: rgb(189, 193, 196);
+}
+
+.title{
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: rgb(10, 133, 43);
+}
+
+.description{
+  font-size: 1rem;
+  text-align: justify;
+  margin-bottom: 15px;
+  word-wrap: s;
+}
+
+.container-edit{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.edit, .delete{
+  padding: 4px 12px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: aliceblue;
+  transition: 0.2s;
+}
+
+.edit{
+  background-color: rgb(97, 107, 7);
+}
+
+.delete{
+  margin-left: 20px;
+  background-color: red;
+}
+
+.edit:hover, .delete:hover{
+  color: #000;
+}
+/*------------------------------------------------------*/
+
+/*-----------------------------------------------------*/
+
+
+
+/*-----------------------------Add POST-------------------*/
+.add-post{
+  z-index: 100;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -1000px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 30rem;
+  padding: 15px 0;
+  background-color: aqua;
+  border-radius: 10px;
+  transition: 0.8s ease-in-out;
+}
+
+.add-post.active{
+  top: 20vh
+}
+
+/*--------------------------Close board----------------------------*/
+#close{
+  cursor: pointer;
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  font-size: 1rem;
+  border: 2px solid #000;
+  padding: 4px 10px;
+  font-weight: bold;
+  background-color: red;
+  border-radius: 10px;
+  color: rgb(206, 206, 201);
+  outline: 0;
+  transition: 0.2s;
+}
+
+#close:hover{
+  color: #000;
+}
+
+h2{
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+input, textarea{
+  outline: none;
+  border: 0;
+  padding: 10px;
+  resize: none;
+}
+
+input{
+  width: 80%;
+}
+
+.btn{
+  outline: 0;
+  border: 0;
+  padding: 10px 20px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#add{
+  font-size: 1rem;
+  background-color: aquamarine;
+  transition: 0.2s;
+}
+
+#add:hover{
+  background-color: green;
+}
+/*--------------------------------------------------------*/
