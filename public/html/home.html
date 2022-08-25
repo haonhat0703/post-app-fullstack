@@ -6,10 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
     <link rel="stylesheet" href="./public/css/home.css" />
+    <link rel="shortcut icon" href="./public/logo.png" type="image/x-icon" />
   </head>
 
   <body>
     <button id="logout">Logout</button>
+    <button id="open-create">Add Post</button>
+
+    <div id="not-hide"></div>
+
+    <div class="add-post">
+      <button id="close">X</button>
+      <h2>Add Post</h2>
+      <input id="title-post" placeholder="Type your title..." />
+      <textarea
+        id="desc-post"
+        cols="40"
+        rows="8"
+        maxlength="300"
+        placeholder="Type your description..."
+      ></textarea>
+
+      <button id="add" class="btn">Create Post</button>
+    </div>
+
+    <div class="posts-container"></div>
   </body>
 
   <script
