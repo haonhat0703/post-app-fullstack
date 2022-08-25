@@ -2,7 +2,9 @@
 require("dotenv").config(); //.env
 const express = require("express");
 const app = express();
+
 const userRouter = require("./routes/user");
+const postRouter = require("./routes/post");
 
 const mongoose = require("mongoose");
 
@@ -53,7 +55,9 @@ app.get("/home", verifyToken, (req, res) => {
   res.sendFile(path.join(__dirname, "./public/html/home.html"));
 });
 
+//router
 app.use("/api", userRouter);
+app.use("/api/posts", postRouter);
 
 //run server
 app.listen(process.env.PORT, () =>
