@@ -43,8 +43,13 @@ const connectDB = async () => {
 };
 connectDB();
 
+app.get("/", (req, res) => {
+  res.redirect("/login");
+});
+
 app.get("/login", (req, res) => {
-  res.sendFile(path.join(__dirname, "./public/html/login.html"));
+  if (req.cookies.token) res.redirect("/home");
+  else res.sendFile(path.join(__dirname, "./public/html/login.html"));
 });
 
 app.get("/register", (req, res) => {
