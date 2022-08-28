@@ -211,3 +211,28 @@ input{
   background-color: green;
 }
 /*--------------------------------------------------------*/
+
+
+/*responsive*/
+@media screen and (max-width:480px) {
+  .posts-container{
+    margin-top: 65px;
+  }
+  .post{
+    padding: 10px 20px;
+    width: 90%;
+  }
+  .title{
+    font-size: 20px;
+  }
+  .add-post{
+    width: 22rem;
+  }
+  input{
+    width: 60%;
+  }
+  textarea{
+    padding: 5px;
+  }
+
+}

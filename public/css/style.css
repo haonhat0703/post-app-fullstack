@@ -20,6 +20,7 @@ body{
 #alert{
   color: rgb(226, 68, 36);
   font-size: 30px;
+  width:max-content ;
   position: absolute;
   top: -100px;
   left: 50%;
@@ -115,4 +116,21 @@ h2{
   background-color: rgb(85, 85, 4);
   color: aliceblue;
   text-shadow: 2px 2px 5px, 2px -2px 5px, -2px 2px 5px, -2px -2px 5px;
+}
+
+/*-responsive-*/
+@media screen and (max-width:480px) {
+  #alert{
+    font-size: 25px;
+    padding: 5px 10px;
+  }
+  .container{
+    padding: 10px 5px;
+  }
+  .container-input{
+    padding: 10px;
+  }
+  h2{
+    font-size: 40px;
+  }
 }
